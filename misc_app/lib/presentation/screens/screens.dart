@@ -6,3 +6,6 @@ export 'gyroscope_screen/gyroscope_screen.dart';
 export 'gyroscope_ball_screen/gyroscope_ball_screen.dart';
 export 'magnetometer_screen/magnetometer_screen.dart';
 export 'location_screen/location_screen.dart';
+export 'pokemons_screen/pokemons_screen.dart';
+export 'pokemon_screen/pokemon_screen.dart';
+export 'biometric_screen/biometric_screen.dart';
