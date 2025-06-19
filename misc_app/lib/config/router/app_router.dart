@@ -53,6 +53,15 @@ class AppRouter {
         path: '/biometrics',
         builder: (context, state) => const BiometricScreen(),
       ),
+      GoRoute(
+        path: '/controlled-map',
+        builder: (context, state) => const ControlledMapScreen(),
+      ),
+      GoRoute(path: '/maps', builder: (context, state) => const MapScreen()),
+      GoRoute(
+        path: '/user-location',
+        builder: (context, state) => const UserLocationScreen(),
+      ),
     ],
   );
 }

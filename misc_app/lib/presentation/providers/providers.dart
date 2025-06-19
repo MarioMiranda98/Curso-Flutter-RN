@@ -7,3 +7,4 @@ export 'compass_provider/compass_provider.dart';
 export 'pokemon_list_provider/pokemon_list_provider.dart';
 export 'pokemon_provider/pokemon_provider.dart';
 export 'local_auth_provider/local_auth_provider.dart';
+export 'user_location_provider/user_location_provider.dart';
