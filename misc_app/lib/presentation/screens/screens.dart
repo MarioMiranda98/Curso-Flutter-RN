@@ -12,3 +12,4 @@ export 'biometric_screen/biometric_screen.dart';
 export 'controlled_map_screen/controlled_map_screen.dart';
 export 'map_screen/map_screen.dart';
 export 'user_location_screen/user_location_screen.dart';
+export 'badge_screen/badge_screen.dart';

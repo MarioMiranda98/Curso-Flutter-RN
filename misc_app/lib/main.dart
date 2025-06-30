@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:misc_app/config/plugins/quick_actions_plugin.dart';
 import 'package:misc_app/config/router/app_router.dart';
 import 'package:misc_app/config/theme/app_theme.dart';
 import 'package:misc_app/presentation/providers/app_state_provider/app_state_provider.dart';
@@ -8,6 +9,7 @@ import 'package:misc_app/presentation/providers/permissions_provider/permissions
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  QuickActionsPlugin.registerActions();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(ProviderScope(child: const MyApp()));

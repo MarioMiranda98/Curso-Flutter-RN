@@ -62,6 +62,7 @@ class AppRouter {
         path: '/user-location',
         builder: (context, state) => const UserLocationScreen(),
       ),
+      GoRoute(path: '/badge', builder: (context, state) => const BadgeScreen()),
     ],
   );
 }

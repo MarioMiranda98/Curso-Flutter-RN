@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:misc_app/presentation/providers/user_location_provider/user_location_provider.dart';
+import 'package:misc_app/presentation/providers/providers.dart';
 
 class UserLocationScreen extends ConsumerWidget {
   const UserLocationScreen({super.key});

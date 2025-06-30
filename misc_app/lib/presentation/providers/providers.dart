@@ -8,3 +8,6 @@ export 'pokemon_list_provider/pokemon_list_provider.dart';
 export 'pokemon_provider/pokemon_provider.dart';
 export 'local_auth_provider/local_auth_provider.dart';
 export 'user_location_provider/user_location_provider.dart';
+export 'user_location_provider/watch_location_provider.dart';
+export 'user_location_provider/map_controller_provider.dart';
+export 'badge_provider/badge_counter_provider.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:geolocator/geolocator.dart';
 
-final userLocationProvider = FutureProvider.autoDispose<(double lat, double lng)>((
+final watchLocationProvider = StreamProvider.autoDispose<(double lat, double lng)>((
   ref,
-) async {
+) async* {
   bool serviceEnabled;
   LocationPermission permission;
 
@@ -13,7 +13,7 @@ final userLocationProvider = FutureProvider.autoDispose<(double lat, double lng)
     // Location services are not enabled don't continue
     // accessing the position and request users of the
     // App to enable the location services.
-    return Future.error('Location services are disabled.');
+    throw Future.error('Location services are disabled.');
   }
 
   permission = await Geolocator.checkPermission();
@@ -25,20 +25,20 @@ final userLocationProvider = FutureProvider.autoDispose<(double lat, double lng)
       // Android's shouldShowRequestPermissionRationale
       // returned true. According to Android guidelines
       // your App should show an explanatory UI now.
-      return Future.error('Location permissions are denied');
+      throw Future.error('Location permissions are denied');
     }
   }
 
   if (permission == LocationPermission.deniedForever) {
     // Permissions are denied forever, handle appropriately.
-    return Future.error(
+    throw Future.error(
       'Location permissions are permanently denied, we cannot request permissions.',
     );
   }
 
   // When we reach here, permissions are granted and we can
   // continue accessing the position of the device.
-  Position pos = await Geolocator.getCurrentPosition();
-
-  return (pos.latitude, pos.longitude);
+  await for (final position in Geolocator.getPositionStream()) {
+    yield (position.latitude, position.longitude);
+  }
 });
