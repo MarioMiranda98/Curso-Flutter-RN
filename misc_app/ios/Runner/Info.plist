@@ -74,5 +74,8 @@
 
 	<key>NSFaceIDUsageDescription</key>
 	<string>Why is my app authenticating using face id?</string>
+
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-8487276351760537~5572749044</string>
 </dict>
 </plist>

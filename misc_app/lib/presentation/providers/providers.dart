@@ -11,3 +11,6 @@ export 'user_location_provider/user_location_provider.dart';
 export 'user_location_provider/watch_location_provider.dart';
 export 'user_location_provider/map_controller_provider.dart';
 export 'badge_provider/badge_counter_provider.dart';
+export 'ads_provider/ad_mob_providers.dart';
+export 'ads_provider/ad_mob_points_provider.dart';
+export 'ads_provider/show_ads_provider.dart';

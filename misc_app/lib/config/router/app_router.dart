@@ -63,6 +63,14 @@ class AppRouter {
         builder: (context, state) => const UserLocationScreen(),
       ),
       GoRoute(path: '/badge', builder: (context, state) => const BadgeScreen()),
+      GoRoute(
+        path: '/ad-fullscreen',
+        builder: (context, state) => const AdFullScreen(),
+      ),
+      GoRoute(
+        path: '/ad-rewarded',
+        builder: (context, state) => const AdRewardedScreen(),
+      ),
     ],
   );
 }
