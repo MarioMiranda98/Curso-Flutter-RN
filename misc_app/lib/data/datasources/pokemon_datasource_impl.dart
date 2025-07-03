@@ -9,12 +9,13 @@ class PokemonDatasourceImpl extends PokemonDatasource {
   final Dio dio;
 
   @override
-  Future<(PokemonEntity?, String)> getPokemon(String id) async {
+  Future<(Pokemon?, String)> getPokemon(String id) async {
     try {
       final resp = await dio.get('/pokemon/$id');
 
-      final PokemonEntity pokemonEntity =
-          PokemonMapper.pokemonResponseModelToEntity(resp.data);
+      final Pokemon pokemonEntity = PokemonMapper.pokemonResponseModelToEntity(
+        resp.data,
+      );
 
       return (pokemonEntity, 'Data obtenida correctamente');
     } catch (e) {

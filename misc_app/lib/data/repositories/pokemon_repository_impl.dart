@@ -6,7 +6,7 @@ class PokemonRepositoryImpl extends PokemonRepository {
   final PokemonDatasource datasource;
 
   @override
-  Future<(PokemonEntity?, String)> getPokemon(String id) async {
+  Future<(Pokemon?, String)> getPokemon(String id) async {
     return await datasource.getPokemon(id);
   }
 }

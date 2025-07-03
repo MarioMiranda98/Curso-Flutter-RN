@@ -24,7 +24,7 @@ class PokemonScreen extends ConsumerWidget {
 class _PokemonView extends StatelessWidget {
   const _PokemonView({required this.pokemonEntity});
 
-  final PokemonEntity pokemonEntity;
+  final Pokemon pokemonEntity;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class _PokemonView extends StatelessWidget {
       ),
       body: Center(
         child: Image.network(
-          pokemonEntity.frontSprite,
+          pokemonEntity.spriteFront,
           fit: BoxFit.contain,
           width: 150.0,
           height: 150.0,
